@@ -14,20 +14,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <main class="py-10 flex justify-center items-center bg-fuchsia-800">
+    <main
+      class="py-10 md:py-14 flex justify-center items-center bg-fuchsia-800"
+    >
       <section
-        class="
-          flex flex-col
-          p-7
-          md:p-10
-          justify-center
-          items-center
-          bg-white
-          rounded-lg
-          shadow-lg
-        "
+        class="flex flex-col p-7 md:p-14 justify-center items-center bg-white rounded-lg shadow-lg"
       >
-        <h1 class="text-3xl text-bold mb-2">Belimbing vs Seledri</h1>
+        <h1 class="text-3xl font-semibold mb-2">Belimbing vs Seledri</h1>
         <hr class="h-0.5 w-full rounded-lg bg-fuchsia-800" />
         {% if uploaded_image %}
         <img
@@ -36,16 +29,7 @@
         />
         {% else %}
         <div
-          class="
-            flex
-            justify-center
-            items-center
-            my-8
-            w-48
-            h-48
-            border-8 border-gray-200
-            rounded-md
-          "
+          class="flex justify-center items-center my-8 w-48 h-48 border-8 border-gray-200 rounded-md"
         >
           <p class="text-center">
             Masukkan gambar Daun Belimbing atau Daun Seledri
@@ -55,27 +39,15 @@
         <p class="mb-8">Hasil Prediksi: {{prediction}}</p>
         {% endif %}
 
-        <form
-          method="post"
-          enctype="multipart/form-data"
-          class="flex flex-col justify-center items-center mx-auto"
-        >
+        <form method="post" enctype="multipart/form-data" class="flex flex-col">
           <input
             type="file"
             name="image"
-            class="
-              mb-4
-              p-4
-              border-8 border-gray-200
-              rounded-md
-              bg-gray-100
-              w-64
-              md:mb-6
-            "
+            class="mb-4 p-4 border-8 border-gray-200 rounded-md bg-gray-100 w-full md:mb-6"
           />
           <button
             type="submit"
-            class="p-4 text-white rounded-md bg-fuchsia-800"
+            class="p-4 text-white rounded-md bg-fuchsia-800 mx-8 transition-all duration-500 ease-out hover:mx-0 hover:bg-fuchsia-600"
           >
             Prediksi Gambar
           </button>
@@ -84,15 +56,17 @@
     </main>
     <footer class="flex gap-x-8 justify-center items-center h-32 bg-white">
       <img
-        class="h-16"
-        src="https://digitalent.kominfo.go.id/assets/@images/logo.png"
-        alt="logo-dts"
+        class="h-20"
+        src="http://www.umm.ac.id/themes/umm10/images/logo.png"
+        alt="logo-umm"
       />
-      <img
-        class="h-16"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Logo_of_Ministry_of_Communication_and_Information_Technology_of_the_Republic_of_Indonesia.svg/1200px-Logo_of_Ministry_of_Communication_and_Information_Technology_of_the_Republic_of_Indonesia.svg.png"
-        alt=""
-      />
+      <div class="font-medium">
+        <p class="underline mb-2">Created by:</p>
+        <ul class="list-disc list-inside text-sm">
+          <li>M Andre Cahyanto [236]</li>
+          <li>Aldhy Sidqi P [226]</li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
